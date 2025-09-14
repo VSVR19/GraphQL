@@ -1,0 +1,21 @@
+# This is a very simple GraphQL schema definition file.
+# It defines a single query called "greeting" that returns a String.
+type Query {
+  # greeting: String
+  # Job! makes sure that we cant return a null value in the place of a Job object.
+  # In GraphQL ALL FIELDS ARE NULLABLE BY DEFAULT.
+  jobs: [Job!]
+}
+
+# This is a custom object type in a GraphQL schema.
+# It defines a Job type with three fields: id, title, and description.
+type Job {
+  # This ID is a scalar type in GraphQL that represents a unique identifier.
+  # There are other scalar types like String, Int, Float, Boolean.
+  
+  # Now this ID is a non-nullable field, meaning it must always have a value.
+  # If we dont return a value for this field in the resolvers, GraphQL will throw an error.
+  id: ID!
+  title: String!
+  description: String
+}

@@ -2,7 +2,7 @@ import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 
 // The first thing to do when creating a GraphQL API is to define the APIs' schema.
-// We use a Schemea Definition Language (SDL) to define the schema
+// We use a Schema Definition Language (SDL) to define the schema
 
 // This schema represents what the users can request from the API
 const typeDefs = `#graphql

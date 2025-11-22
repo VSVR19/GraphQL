@@ -57,7 +57,9 @@ const apolloServer = new ApolloServer({ typeDefs, resolvers })
 // await as apolloServer 
 await apolloServer.start();
 
+// Use the APOLLOMIDDLEWARE to handle /graphql endpoint
 app.use('/graphql', apolloMiddleware(apolloServer));
+// Use the handleLogin FUNCTION to handle /login endpoint
 app.post('/login', handleLogin);
 
 app.listen({ port: PORT }, () => {
